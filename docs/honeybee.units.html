@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+    <title>honeybee.units module &#8212; honeybee  documentation</title>
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="honeybee.typing module" href="honeybee.typing.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          honeybee</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">CLI Docs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cli/index.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli/index.html#commands">Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cli/validate.html">validate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cli/validate.html#honeybee-validate">honeybee validate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="cli/validate.html#honeybee-validate-model">model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cli/create.html">create</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cli/create.html#honeybee-create">honeybee create</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="cli/create.html#honeybee-create-l-shaped-plan">l-shaped-plan</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cli/create.html#honeybee-create-rectangle-plan">rectangle-plan</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cli/create.html#honeybee-create-shoe-box">shoe-box</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cli/edit.html">edit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cli/edit.html#honeybee-edit">honeybee edit</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="cli/edit.html#honeybee-edit-convert-units">convert-units</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cli/edit.html#honeybee-edit-extruded-border">extruded-border</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cli/edit.html#honeybee-edit-louvers-by-count">louvers-by-count</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cli/edit.html#honeybee-edit-louvers-by-spacing">louvers-by-spacing</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cli/edit.html#honeybee-edit-overhang">overhang</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cli/edit.html#honeybee-edit-solve-adjacency">solve-adjacency</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cli/edit.html#honeybee-edit-windows-by-ratio">windows-by-ratio</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cli/edit.html#honeybee-edit-windows-by-ratio-rect">windows-by-ratio-rect</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cli/setconfig.html">setconfig</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">honeybee</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee.html">honeybee package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.cli.html">honeybee.cli package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee.cli.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="honeybee.cli.create.html">honeybee.cli.create module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="honeybee.cli.edit.html">honeybee.cli.edit module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="honeybee.cli.setconfig.html">honeybee.cli.setconfig module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="honeybee.cli.validate.html">honeybee.cli.validate module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee.cli.html#module-honeybee.cli">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.writer.html">honeybee.writer package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="honeybee.writer.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="honeybee.writer.aperture.html">honeybee.writer.aperture module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="honeybee.writer.door.html">honeybee.writer.door module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="honeybee.writer.face.html">honeybee.writer.face module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="honeybee.writer.model.html">honeybee.writer.model module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="honeybee.writer.room.html">honeybee.writer.room module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="honeybee.writer.shade.html">honeybee.writer.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="honeybee.writer.html#module-honeybee.writer">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="honeybee.altnumber.html">honeybee.altnumber module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.aperture.html">honeybee.aperture module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.boundarycondition.html">honeybee.boundarycondition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.checkdup.html">honeybee.checkdup module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.colorobj.html">honeybee.colorobj module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.config.html">honeybee.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.dictutil.html">honeybee.dictutil module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.door.html">honeybee.door module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.extensionutil.html">honeybee.extensionutil module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.face.html">honeybee.face module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.facetype.html">honeybee.facetype module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.logutil.html">honeybee.logutil module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.model.html">honeybee.model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.orientation.html">honeybee.orientation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.properties.html">honeybee.properties module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.room.html">honeybee.room module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.search.html">honeybee.search module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.shade.html">honeybee.shade module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.typing.html">honeybee.typing module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">honeybee.units module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.html#module-honeybee">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">CLI Docs</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">honeybee</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee.html">honeybee package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="honeybee.altnumber.html">honeybee.altnumber module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.aperture.html">honeybee.aperture module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.boundarycondition.html">honeybee.boundarycondition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.checkdup.html">honeybee.checkdup module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.colorobj.html">honeybee.colorobj module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.config.html">honeybee.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.dictutil.html">honeybee.dictutil module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.door.html">honeybee.door module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.extensionutil.html">honeybee.extensionutil module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.face.html">honeybee.face module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.facetype.html">honeybee.facetype module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.logutil.html">honeybee.logutil module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.model.html">honeybee.model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.orientation.html">honeybee.orientation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.properties.html">honeybee.properties module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.room.html">honeybee.room module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.search.html">honeybee.search module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.shade.html">honeybee.shade module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.typing.html">honeybee.typing module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">honeybee.units module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.html#module-honeybee">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="honeybee.typing.html" title="Previous Chapter: honeybee.typing module"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; honeybee.typi...</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="_sources/honeybee.units.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul>
+<li class="toctree-l1"><a class="reference internal" href="cli/index.html">CLI Docs</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">honeybee</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="honeybee.html">honeybee package</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="honeybee.html#subpackages">Subpackages</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="honeybee.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="honeybee.altnumber.html">honeybee.altnumber module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.aperture.html">honeybee.aperture module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.boundarycondition.html">honeybee.boundarycondition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.checkdup.html">honeybee.checkdup module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.colorobj.html">honeybee.colorobj module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.config.html">honeybee.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.dictutil.html">honeybee.dictutil module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.door.html">honeybee.door module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.extensionutil.html">honeybee.extensionutil module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.face.html">honeybee.face module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.facetype.html">honeybee.facetype module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.logutil.html">honeybee.logutil module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.model.html">honeybee.model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.orientation.html">honeybee.orientation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.properties.html">honeybee.properties module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.room.html">honeybee.room module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.search.html">honeybee.search module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.shade.html">honeybee.shade module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="honeybee.typing.html">honeybee.typing module</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">honeybee.units module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="honeybee.html#module-honeybee">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-8 content" role="main">
+      
+  <section id="module-honeybee.units">
+<span id="honeybee-units-module"></span><h1>honeybee.units module<a class="headerlink" href="#module-honeybee.units" title="Permalink to this headline">¶</a></h1>
+<p>Utility functions for converting and parsing units of length.</p>
+<dl class="py function">
+<dt id="honeybee.units.conversion_factor_to_meters">
+<code class="sig-prename descclassname">honeybee.units.</code><code class="sig-name descname">conversion_factor_to_meters</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">units</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee/units.html#conversion_factor_to_meters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee.units.conversion_factor_to_meters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the conversion factor to meters based on input units.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>units</strong> – <p>Text for the units. Choose from the following:</p>
+<ul class="simple">
+<li><p>Meters</p></li>
+<li><p>Millimeters</p></li>
+<li><p>Feet</p></li>
+<li><p>Inches</p></li>
+<li><p>Centimeters</p></li>
+</ul>
+</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A number for the conversion factor, which should be multiplied by
+all distance units taken from Rhino geometry in order to convert
+them to meters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="honeybee.units.parse_distance_string">
+<code class="sig-prename descclassname">honeybee.units.</code><code class="sig-name descname">parse_distance_string</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">distance_string</span></em>, <em class="sig-param"><span class="n">destination_units</span><span class="o">=</span><span class="default_value">'Meters'</span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/honeybee/units.html#parse_distance_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#honeybee.units.parse_distance_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a string of a distance value into a destination units system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>distance_string</strong> – Text for a distance value to be parsed into the
+destination units. This can have the units at the end of
+it (eg. “3ft”). If no units are included, the number will be
+assumed to be in the destination units system.</p></li>
+<li><p><strong>destination_units</strong> – The destination units system to which the distance
+string will be computed. (Default: Meters).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A number for the distance in the destination_units.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2021, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>

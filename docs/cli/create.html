@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17: http://docutils.sourceforge.net/" />
+
+    <title>create &#8212; honeybee  documentation</title>
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="edit" href="edit.html" />
+    <link rel="prev" title="validate" href="validate.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js "></script>
+<script type="text/javascript" src="../_static/js/jquery-fix.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-3.3.7/js/bootstrap.min.js "></script>
+<script type="text/javascript" src="../_static/bootstrap-sphinx.js "></script>
+
+  </head><body>
+
+  <div id="navbar" class="navbar navbar-inverse navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          honeybee</a>
+        <span class="navbar-text navbar-version pull-left"><b></b></span>
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Site <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CLI Docs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#installation">Installation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#commands">Commands</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="validate.html">validate</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="validate.html#honeybee-validate">honeybee validate</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="validate.html#honeybee-validate-model">model</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">create</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#honeybee-create">honeybee create</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#honeybee-create-l-shaped-plan">l-shaped-plan</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#honeybee-create-rectangle-plan">rectangle-plan</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#honeybee-create-shoe-box">shoe-box</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="edit.html">edit</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="edit.html#honeybee-edit">honeybee edit</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="edit.html#honeybee-edit-convert-units">convert-units</a></li>
+<li class="toctree-l5"><a class="reference internal" href="edit.html#honeybee-edit-extruded-border">extruded-border</a></li>
+<li class="toctree-l5"><a class="reference internal" href="edit.html#honeybee-edit-louvers-by-count">louvers-by-count</a></li>
+<li class="toctree-l5"><a class="reference internal" href="edit.html#honeybee-edit-louvers-by-spacing">louvers-by-spacing</a></li>
+<li class="toctree-l5"><a class="reference internal" href="edit.html#honeybee-edit-overhang">overhang</a></li>
+<li class="toctree-l5"><a class="reference internal" href="edit.html#honeybee-edit-solve-adjacency">solve-adjacency</a></li>
+<li class="toctree-l5"><a class="reference internal" href="edit.html#honeybee-edit-windows-by-ratio">windows-by-ratio</a></li>
+<li class="toctree-l5"><a class="reference internal" href="edit.html#honeybee-edit-windows-by-ratio-rect">windows-by-ratio-rect</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="setconfig.html">setconfig</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">honeybee</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../honeybee.html">honeybee package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../honeybee.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.cli.html">honeybee.cli package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../honeybee.cli.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../honeybee.cli.create.html">honeybee.cli.create module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../honeybee.cli.edit.html">honeybee.cli.edit module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../honeybee.cli.setconfig.html">honeybee.cli.setconfig module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../honeybee.cli.validate.html">honeybee.cli.validate module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../honeybee.cli.html#module-honeybee.cli">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.writer.html">honeybee.writer package</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="../honeybee.writer.html#submodules">Submodules</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="../honeybee.writer.aperture.html">honeybee.writer.aperture module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../honeybee.writer.door.html">honeybee.writer.door module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../honeybee.writer.face.html">honeybee.writer.face module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../honeybee.writer.model.html">honeybee.writer.model module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../honeybee.writer.room.html">honeybee.writer.room module</a></li>
+<li class="toctree-l6"><a class="reference internal" href="../honeybee.writer.shade.html">honeybee.writer.shade module</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../honeybee.writer.html#module-honeybee.writer">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../honeybee.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.altnumber.html">honeybee.altnumber module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.aperture.html">honeybee.aperture module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.boundarycondition.html">honeybee.boundarycondition module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.checkdup.html">honeybee.checkdup module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.colorobj.html">honeybee.colorobj module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.config.html">honeybee.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.dictutil.html">honeybee.dictutil module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.door.html">honeybee.door module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.extensionutil.html">honeybee.extensionutil module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.face.html">honeybee.face module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.facetype.html">honeybee.facetype module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.logutil.html">honeybee.logutil module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.model.html">honeybee.model module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.orientation.html">honeybee.orientation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.properties.html">honeybee.properties module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.room.html">honeybee.room module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.search.html">honeybee.search module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.shade.html">honeybee.shade module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.typing.html">honeybee.typing module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../honeybee.units.html">honeybee.units module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../honeybee.html#module-honeybee">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CLI Docs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#installation">Installation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#commands">Commands</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="validate.html">validate</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">create</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#honeybee-create">honeybee create</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#honeybee-create-l-shaped-plan">l-shaped-plan</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#honeybee-create-rectangle-plan">rectangle-plan</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#honeybee-create-shoe-box">shoe-box</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="edit.html">edit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setconfig.html">setconfig</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">honeybee</a></li>
+</ul>
+</ul>
+</li>
+              
+            
+            
+              
+                
+  <li>
+    <a href="validate.html" title="Previous Chapter: validate"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm hidden-tablet">&laquo; validate</span>
+    </a>
+  </li>
+  <li>
+    <a href="edit.html" title="Next Chapter: edit"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm hidden-tablet">edit &raquo;</span>
+    </a>
+  </li>
+              
+            
+            
+            
+            
+              <li class="hidden-sm">
+<div id="sourcelink">
+  <a href="../_sources/cli/create.rst.txt"
+     rel="nofollow">Source</a>
+</div></li>
+            
+          </ul>
+
+          
+            
+<form class="navbar-form navbar-right" action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+          
+        </div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-4">
+        <div id="sidebar" class="bs-sidenav" role="complementary"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">CLI Docs</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#installation">Installation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#commands">Commands</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="validate.html">validate</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">create</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#honeybee-create">honeybee create</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#honeybee-create-l-shaped-plan">l-shaped-plan</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#honeybee-create-rectangle-plan">rectangle-plan</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#honeybee-create-shoe-box">shoe-box</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="edit.html">edit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="setconfig.html">setconfig</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">honeybee</a></li>
+</ul>
+
+        </div>
+      </div>
+    <div class="body col-md-8 content" role="main">
+      
+  <section id="create">
+<h1>create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h1>
+<section id="honeybee-create">
+<h2>honeybee create<a class="headerlink" href="#honeybee-create" title="Permalink to this headline">¶</a></h2>
+<p>Commands for creating Honeybee models.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>honeybee create <span class="o">[</span>OPTIONS<span class="o">]</span> COMMAND <span class="o">[</span>ARGS<span class="o">]</span>...
+</pre></div>
+</div>
+<section id="honeybee-create-l-shaped-plan">
+<h3>l-shaped-plan<a class="headerlink" href="#honeybee-create-l-shaped-plan" title="Permalink to this headline">¶</a></h3>
+<p>Create a model with an L-shaped floor plan.</p>
+<p>Note that the resulting Rooms in the model won’t have any windows or solved
+adjacencies. The edit commands should be used for this purpose.</p>
+<div class="line-block">
+<div class="line">Args:</div>
+<div class="line-block">
+<div class="line">width_1: Number for the width of the lower part of the L segment.</div>
+<div class="line">length_1: Number for the length of the lower part of the L segment, not</div>
+<div class="line-block">
+<div class="line">counting the overlap between the upper and lower segments.</div>
+</div>
+<div class="line">width_2: Number for the width of the upper (left) part of the L segment.</div>
+<div class="line">length_2: Number for the length of the upper (left) part of the L segment, not</div>
+<div class="line-block">
+<div class="line">counting the overlap between the upper and lower segments.</div>
+</div>
+<div class="line">floor_to_floor_height: Number for the height of each floor of the model</div>
+<div class="line-block">
+<div class="line">(in the Z direction).</div>
+</div>
+</div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>honeybee create l-shaped-plan <span class="o">[</span>OPTIONS<span class="o">]</span> WIDTH_1 LENGTH_1 WIDTH_2 LENGTH_2
+                              FLOOR_TO_FLOOR_HEIGHT
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-l-shaped-plan-p">
+<span id="cmdoption-honeybee-create-l-shaped-plan-perimeter-offset"></span><code class="sig-name descname">-p</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--perimeter-offset</code><code class="sig-prename descclassname"> &lt;perimeter_offset&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-l-shaped-plan-p" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional positive number that will be used  to offset the perimeter to create core/perimeter Rooms. If this value is 0, no offset will occur and each floor will have one Room</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-l-shaped-plan-s">
+<span id="cmdoption-honeybee-create-l-shaped-plan-story-count"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--story-count</code><code class="sig-prename descclassname"> &lt;story_count&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-l-shaped-plan-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>An integer for the number of stories to generate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-l-shaped-plan-a">
+<span id="cmdoption-honeybee-create-l-shaped-plan-orientation-angle"></span><code class="sig-name descname">-a</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--orientation-angle</code><code class="sig-prename descclassname"> &lt;orientation_angle&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-l-shaped-plan-a" title="Permalink to this definition">¶</a></dt>
+<dd><p>A number between 0 and 360 for the counterclockwise orientation that the L faces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-l-shaped-plan-outdoor-roof">
+<span id="cmdoption-honeybee-create-l-shaped-plan-ar"></span><span id="cmdoption-honeybee-create-l-shaped-plan-adiabatic-roof"></span><code class="sig-name descname">--outdoor-roof</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">-ar</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--adiabatic-roof</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-l-shaped-plan-outdoor-roof" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flag to note whether the roof faces of the top floor should be outdoor or adiabatic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-l-shaped-plan-ground-floor">
+<span id="cmdoption-honeybee-create-l-shaped-plan-af"></span><span id="cmdoption-honeybee-create-l-shaped-plan-adiabatic-floor"></span><code class="sig-name descname">--ground-floor</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">-af</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--adiabatic-floor</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-l-shaped-plan-ground-floor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flag to note whether the floor faces of the bottom floor should be ground or adiabatic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-l-shaped-plan-u">
+<span id="cmdoption-honeybee-create-l-shaped-plan-units"></span><code class="sig-name descname">-u</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--units</code><code class="sig-prename descclassname"> &lt;units&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-l-shaped-plan-u" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text for the units system in which the model geometry exists. Must be (Meters, Millimeters, Feet, Inches, Centimeters).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>Meters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-l-shaped-plan-t">
+<span id="cmdoption-honeybee-create-l-shaped-plan-tolerance"></span><code class="sig-name descname">-t</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--tolerance</code><code class="sig-prename descclassname"> &lt;tolerance&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-l-shaped-plan-t" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum difference between x, y, and z values at which vertices are considered equivalent.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-l-shaped-plan-f">
+<span id="cmdoption-honeybee-create-l-shaped-plan-output-file"></span><code class="sig-name descname">-f</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--output-file</code><code class="sig-prename descclassname"> &lt;output_file&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-l-shaped-plan-f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional file to output the Model JSON string. By default it will be printed out to stdout</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-l-shaped-plan-arg-WIDTH_1">
+<span id="cmdoption-honeybee-create-l-shaped-plan-arg-width-1"></span><code class="sig-name descname">WIDTH_1</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-l-shaped-plan-arg-WIDTH_1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-l-shaped-plan-arg-LENGTH_1">
+<span id="cmdoption-honeybee-create-l-shaped-plan-arg-length-1"></span><code class="sig-name descname">LENGTH_1</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-l-shaped-plan-arg-LENGTH_1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-l-shaped-plan-arg-WIDTH_2">
+<span id="cmdoption-honeybee-create-l-shaped-plan-arg-width-2"></span><code class="sig-name descname">WIDTH_2</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-l-shaped-plan-arg-WIDTH_2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-l-shaped-plan-arg-LENGTH_2">
+<span id="cmdoption-honeybee-create-l-shaped-plan-arg-length-2"></span><code class="sig-name descname">LENGTH_2</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-l-shaped-plan-arg-LENGTH_2" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-l-shaped-plan-arg-FLOOR_TO_FLOOR_HEIGHT">
+<span id="cmdoption-honeybee-create-l-shaped-plan-arg-floor-to-floor-height"></span><code class="sig-name descname">FLOOR_TO_FLOOR_HEIGHT</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-l-shaped-plan-arg-FLOOR_TO_FLOOR_HEIGHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+</section>
+<section id="honeybee-create-rectangle-plan">
+<h3>rectangle-plan<a class="headerlink" href="#honeybee-create-rectangle-plan" title="Permalink to this headline">¶</a></h3>
+<p>Create a model with a rectangular floor plan.</p>
+<p>Note that the resulting Rooms in the model won’t have any windows or solved
+adjacencies. The edit commands should be used for this purpose.</p>
+<div class="line-block">
+<div class="line">Args:</div>
+<div class="line-block">
+<div class="line">width: Number for the width of the plan (in the X direction).</div>
+<div class="line">length: Number for the length of the plan (in the Y direction).</div>
+<div class="line">floor_to_floor_height: Number for the height of each floor of the model</div>
+<div class="line-block">
+<div class="line">(in the Z direction).</div>
+</div>
+</div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>honeybee create rectangle-plan <span class="o">[</span>OPTIONS<span class="o">]</span> WIDTH LENGTH FLOOR_TO_FLOOR_HEIGHT
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-rectangle-plan-p">
+<span id="cmdoption-honeybee-create-rectangle-plan-perimeter-offset"></span><code class="sig-name descname">-p</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--perimeter-offset</code><code class="sig-prename descclassname"> &lt;perimeter_offset&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-rectangle-plan-p" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional positive number that will be used  to offset the perimeter to create core/perimeter Rooms. If this value is 0, no offset will occur and each floor will have one Room</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-rectangle-plan-s">
+<span id="cmdoption-honeybee-create-rectangle-plan-story-count"></span><code class="sig-name descname">-s</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--story-count</code><code class="sig-prename descclassname"> &lt;story_count&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-rectangle-plan-s" title="Permalink to this definition">¶</a></dt>
+<dd><p>An integer for the number of stories to generate.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>1</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-rectangle-plan-a">
+<span id="cmdoption-honeybee-create-rectangle-plan-orientation-angle"></span><code class="sig-name descname">-a</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--orientation-angle</code><code class="sig-prename descclassname"> &lt;orientation_angle&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-rectangle-plan-a" title="Permalink to this definition">¶</a></dt>
+<dd><p>A number between 0 and 360 for the counterclockwise orientation that the width of the box faces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-rectangle-plan-outdoor-roof">
+<span id="cmdoption-honeybee-create-rectangle-plan-ar"></span><span id="cmdoption-honeybee-create-rectangle-plan-adiabatic-roof"></span><code class="sig-name descname">--outdoor-roof</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">-ar</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--adiabatic-roof</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-rectangle-plan-outdoor-roof" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flag to note whether the roof faces of the top floor should be outdoor or adiabatic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-rectangle-plan-ground-floor">
+<span id="cmdoption-honeybee-create-rectangle-plan-af"></span><span id="cmdoption-honeybee-create-rectangle-plan-adiabatic-floor"></span><code class="sig-name descname">--ground-floor</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">-af</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--adiabatic-floor</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-rectangle-plan-ground-floor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flag to note whether the floor faces of the bottom floor should be ground or adiabatic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-rectangle-plan-u">
+<span id="cmdoption-honeybee-create-rectangle-plan-units"></span><code class="sig-name descname">-u</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--units</code><code class="sig-prename descclassname"> &lt;units&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-rectangle-plan-u" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text for the units system in which the model geometry exists. Must be (Meters, Millimeters, Feet, Inches, Centimeters).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>Meters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-rectangle-plan-t">
+<span id="cmdoption-honeybee-create-rectangle-plan-tolerance"></span><code class="sig-name descname">-t</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--tolerance</code><code class="sig-prename descclassname"> &lt;tolerance&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-rectangle-plan-t" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum difference between x, y, and z values at which vertices are considered equivalent.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-rectangle-plan-f">
+<span id="cmdoption-honeybee-create-rectangle-plan-output-file"></span><code class="sig-name descname">-f</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--output-file</code><code class="sig-prename descclassname"> &lt;output_file&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-rectangle-plan-f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional file to output the Model JSON string. By default it will be printed out to stdout</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-rectangle-plan-arg-WIDTH">
+<span id="cmdoption-honeybee-create-rectangle-plan-arg-width"></span><code class="sig-name descname">WIDTH</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-rectangle-plan-arg-WIDTH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-rectangle-plan-arg-LENGTH">
+<span id="cmdoption-honeybee-create-rectangle-plan-arg-length"></span><code class="sig-name descname">LENGTH</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-rectangle-plan-arg-LENGTH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-rectangle-plan-arg-FLOOR_TO_FLOOR_HEIGHT">
+<span id="cmdoption-honeybee-create-rectangle-plan-arg-floor-to-floor-height"></span><code class="sig-name descname">FLOOR_TO_FLOOR_HEIGHT</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-rectangle-plan-arg-FLOOR_TO_FLOOR_HEIGHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+</section>
+<section id="honeybee-create-shoe-box">
+<h3>shoe-box<a class="headerlink" href="#honeybee-create-shoe-box" title="Permalink to this headline">¶</a></h3>
+<p>Create a model with a single shoe box Room.</p>
+<div class="line-block">
+<div class="line">Args:</div>
+<div class="line-block">
+<div class="line">width: Number for the width of the box (in the X direction).</div>
+<div class="line">depth: Number for the depth of the box (in the Y direction).</div>
+<div class="line">height: Number for the height of the box (in the Z direction).</div>
+</div>
+</div>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>honeybee create shoe-box <span class="o">[</span>OPTIONS<span class="o">]</span> WIDTH DEPTH HEIGHT
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-shoe-box-a">
+<span id="cmdoption-honeybee-create-shoe-box-orientation-angle"></span><code class="sig-name descname">-a</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--orientation-angle</code><code class="sig-prename descclassname"> &lt;orientation_angle&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-shoe-box-a" title="Permalink to this definition">¶</a></dt>
+<dd><p>A number between 0 and 360 for the clockwise orientation of the box in degrees. (0=North, 90=East, 180=South, 270=West).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-shoe-box-wr">
+<span id="cmdoption-honeybee-create-shoe-box-window-ratio"></span><code class="sig-name descname">-wr</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--window-ratio</code><code class="sig-prename descclassname"> &lt;window_ratio&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-shoe-box-wr" title="Permalink to this definition">¶</a></dt>
+<dd><p>A number between 0 and 1 (but not equal to 1) for the ratio between aperture area and area of the face pointing towards the orientation-angle. Using 0 will generate no windows</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>0</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-shoe-box-adiabatic">
+<span id="cmdoption-honeybee-create-shoe-box-o"></span><span id="cmdoption-honeybee-create-shoe-box-outdoors"></span><code class="sig-name descname">--adiabatic</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">-o</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--outdoors</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-shoe-box-adiabatic" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flag to note whether the faces that are not in the direction of the orientation-angle are adiabatic or outdoors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>True</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-shoe-box-u">
+<span id="cmdoption-honeybee-create-shoe-box-units"></span><code class="sig-name descname">-u</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--units</code><code class="sig-prename descclassname"> &lt;units&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-shoe-box-u" title="Permalink to this definition">¶</a></dt>
+<dd><p>Text for the units system in which the model geometry exists. Must be (Meters, Millimeters, Feet, Inches, Centimeters).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default</dt>
+<dd class="field-odd"><p>Meters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-shoe-box-t">
+<span id="cmdoption-honeybee-create-shoe-box-tolerance"></span><code class="sig-name descname">-t</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--tolerance</code><code class="sig-prename descclassname"> &lt;tolerance&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-shoe-box-t" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum difference between x, y, and z values at which vertices are considered equivalent.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-shoe-box-f">
+<span id="cmdoption-honeybee-create-shoe-box-output-file"></span><code class="sig-name descname">-f</code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname">, </code><code class="sig-name descname">--output-file</code><code class="sig-prename descclassname"> &lt;output_file&gt;</code><a class="headerlink" href="#cmdoption-honeybee-create-shoe-box-f" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optional file to output the Model JSON string. By default it will be printed out to stdout</p>
+</dd></dl>
+
+<p class="rubric">Arguments</p>
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-shoe-box-arg-WIDTH">
+<span id="cmdoption-honeybee-create-shoe-box-arg-width"></span><code class="sig-name descname">WIDTH</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-shoe-box-arg-WIDTH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-shoe-box-arg-DEPTH">
+<span id="cmdoption-honeybee-create-shoe-box-arg-depth"></span><code class="sig-name descname">DEPTH</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-shoe-box-arg-DEPTH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+<dl class="std option">
+<dt id="cmdoption-honeybee-create-shoe-box-arg-HEIGHT">
+<span id="cmdoption-honeybee-create-shoe-box-arg-height"></span><code class="sig-name descname">HEIGHT</code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-honeybee-create-shoe-box-arg-HEIGHT" title="Permalink to this definition">¶</a></dt>
+<dd><p>Required argument</p>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+    </div>
+      
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2021, Ladybug Tools.<br/>
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.3.1.<br/>
+    </p>
+  </div>
+</footer>
+  </body>
+</html>
